@@ -17,7 +17,7 @@ public class Lab2_3 {
         System.out.printf("Your bmi is: %.1f\n", bmi);
 
         float increaseWeight = (18.6f - bmi)*(inputHeight*2);
-        float decreaseWeight = (bmi - 25f)*(inputHeight*2);
+        float decreaseWeight = (bmi - 24.9f)*(inputHeight*2);
 
         if(bmi <= 18.5){
             System.out.printf("=> You need to increase %.0f kg", increaseWeight);
