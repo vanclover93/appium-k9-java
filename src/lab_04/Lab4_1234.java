@@ -1,35 +1,57 @@
-package lab_04;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class Lab4_1234 {
+public class Lab_4 {
 
     public static void main(String[] args) {
-        List<Integer> myArrayList = new ArrayList<>();
-        int max = 1;
-        int min = 1;
+        System.out.println("1. Add number into ArrayList");
+        System.out.println("2. Print numbers");
+        System.out.println("3. Get maximum number");
+        System.out.println("4. Get minimum number");
 
-        myArrayList.add(1);
-        myArrayList.add(3);
-        myArrayList.add(6);
-        myArrayList.add(8);
-        myArrayList.add(9);
-        myArrayList.add(11);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please input your option: ");
+        int option = scanner.nextInt();
 
-        for (int index = 0; index < myArrayList.size(); index++) {
+        List<Integer> arrList = new ArrayList<>();
+        arrList.add(1);
+        arrList.add(5);
+        arrList.add(7);
+        arrList.add(10);
+        arrList.add(15);
 
-            System.out.println(myArrayList.get(index));
+        switch (option){
+            case 1:
+                arrList.add(19);
+                System.out.println("New list:" +arrList);
+                break;
 
-            if (myArrayList.get(index) > max) {
-                max = myArrayList.get(index);
-            }
-            if (myArrayList.get(index) < min) {
-                min = myArrayList.get(index);
-            }
+            case 2:
+                System.out.println("List is" + arrList);
+                break;
+
+            case 3:
+                int max = arrList.get(0);
+                for (int index = 0; index < arrList.size(); index++) {
+                    if(arrList.get(index) > max){
+                        max = arrList.get(index);
+                    }
+                }
+                System.out.printf("Maximum number is: %d", max);
+                break;
+
+            case 4:
+                int min = arrList.get(0);
+                for (int index = 0; index < arrList.size(); index++) {
+                    if(arrList.get(index) < min){
+                        min = arrList.get(index);
+                    }
+                }
+                System.out.printf("Minimum number is: %d", min);
+                break;
+            default:
+                System.out.println("Invalid option");
         }
-        System.out.printf("Maximum number is: %d\n", max);
-        System.out.printf("Minimum number is: %d\n", min);
     }
 }
-
