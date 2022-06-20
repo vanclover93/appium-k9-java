@@ -1,23 +1,17 @@
 package lab_07;
-
 public class Employee {
+    private String name;
     private int salary;
 
     public Employee(){
     }
 
-    public Employee(int salary) {
-        this.salary = salary;
+    public Employee(String name){
+        this.name = name;
     }
 
     public int getSalary() {
         return this.salary;
     }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public void add(int salary) {
-    }
 }
+

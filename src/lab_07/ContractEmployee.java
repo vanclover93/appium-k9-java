@@ -1,7 +1,12 @@
 package lab_07;
 
 public class ContractEmployee extends Employee{
-    public ContractEmployee() {
-        this.setSalary(4000);
+    private static int fulltimeSalary = 40000;
+
+    public ContractEmployee(String name){
+        super(name);
+    }
+    public int getSalary(){
+        return fulltimeSalary;
     }
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Lab_4 {
+public class Lab4_1234 {
 
     public static void main(String[] args) {
         System.out.println("1. Add number into ArrayList");

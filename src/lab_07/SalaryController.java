@@ -1,21 +1,18 @@
 package lab_07;
-
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class SalaryController {
     public static void main(String[] args) {
-        ArrayList<Employee> employeeList = new ArrayList<Employee>();
+        Employee teo = new FullTimeEmployee("Teo");
+        Employee nam = new FullTimeEmployee("Nam");
+        Employee nga = new FullTimeEmployee("Nga");
+        Employee mai = new ContractEmployee("Mai");
+        Employee lan = new ContractEmployee("Lan");
 
-        employeeList.add(new FullTimeEmployee());
-        employeeList.add(new FullTimeEmployee());
-        employeeList.add(new FullTimeEmployee());
-        employeeList.add(new ContractEmployee());
-        employeeList.add(new ContractEmployee());
-        
-        calculateSalary(employeeList);
+        ArrayList<Employee> employeeList = new ArrayList<>(Arrays.asList(teo,nam,nga,mai,lan));
+        System.out.println("Total salary is:" + calculateSalary(employeeList));
     }
     
     public static int calculateSalary(ArrayList<Employee> employeeList){
@@ -23,7 +20,6 @@ public class SalaryController {
         for (Employee employee : employeeList) {
             totalSalary = totalSalary + employee.getSalary();
         }
-        System.out.println(totalSalary);
         return totalSalary;
     }
 }

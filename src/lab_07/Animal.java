@@ -1,16 +1,25 @@
 package lab_07;
-
 import java.security.SecureRandom;
 
 public class Animal {
-    final int maxhorse = 75;
-    final int maxTiger = 100;
-    final int maxDog = 60;
-    int randomHorseSpeed = new SecureRandom().nextInt(maxhorse);
-    int randomTigerSpeed = new SecureRandom().nextInt(maxTiger);
-    int randomDogSpeed = new SecureRandom().nextInt(maxDog);
+    private String name;
+    private int speed;
 
-    
+    public Animal(String name, int maxSpeed){
+        this.speed = new SecureRandom().nextInt(maxSpeed);
+        this.name = name;
+    }
 
+    public int getSpeed(){
+        return this.speed;
+    }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", speed=" + speed +
+                '}';
+    }
 }
+
