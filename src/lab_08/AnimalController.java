@@ -11,11 +11,7 @@ public class AnimalController {
         for (int i = 0; i < animalList.size(); i++) {
             if(animalList.get(i).getSpeed() > animalWin.getSpeed() && animalList.get(i).getFlyable() == false){
                 animalWin = animalList.get(i);
-
             }
-            System.out.println(animalList.get(0));
-            System.out.println(animalList.get(1));
-            System.out.println(animalList.get(2));
         }
         return animalWin;
     }
