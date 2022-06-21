@@ -9,9 +9,13 @@ public class AnimalController {
     public static Animal racingAnimal(List<Animal> animalList){
         Animal animalWin = animalList.get(0);
         for (int i = 0; i < animalList.size(); i++) {
-            if(animalList.get(i).getSpeed() > animalWin.getSpeed()){
+            if(animalList.get(i).getSpeed() > animalWin.getSpeed() && animalList.get(i).getFlyable() == false){
                 animalWin = animalList.get(i);
+
             }
+            System.out.println(animalList.get(0));
+            System.out.println(animalList.get(1));
+            System.out.println(animalList.get(2));
         }
         return animalWin;
     }

@@ -2,13 +2,15 @@ package lab_08;
 import java.security.SecureRandom;
 
 public class Animal {
-    private String name;
-    private int speed;
-    private boolean flyable;
+    private String name = "Tiger";
+    private int speed = 1;
+    private boolean flyable = false;
+            ;
 
-    public Animal(String name, int maxSpeed){
+    public Animal(String name, int maxSpeed, boolean flyable){
         this.speed = new SecureRandom().nextInt(maxSpeed);
         this.name = name;
+        this.flyable = flyable;
     }
 
     public Animal() {
@@ -42,9 +44,9 @@ public class Animal {
     }
 
     public static class Builder {
-        private String name;
-        private int speed;
-        private boolean flyable;
+        private String name = "Tiger";
+        private int speed = 1;
+        private boolean flyable = false;
 
         public Builder setName(String name) {
             this.name = name;
