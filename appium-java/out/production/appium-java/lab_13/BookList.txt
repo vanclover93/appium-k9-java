@@ -1,0 +1,5 @@
+1000;Dac nhan tam;Dale Carnegie;1990
+1001;Nha gia kim;Paulo Coelho;1985
+1002;Ong gia va bien ca;Hemingway;1999
+1003;Ty phu ban giay;Tony Hsieh;2001
+1004;Bo gia;Mario Puzo;1975
